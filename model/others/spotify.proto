@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+message LoginResponse {
+  message one {
+    string username = 1;
+    string token = 2;
+    string refresh = 3;
+    int32 num = 4;
+  }
+  one response = 1;
+}
+
+message RefreshRequest {
+  message one {
+    string id = 1;
+    string id2 = 2;
+  }
+  one client_info = 1;
+  message two {
+    string username = 1;
+    string token = 2;
+  }
+  two refresh = 100;
+}
+
+message RecoveryRequest {
+  message one {
+    string id = 1;
+    string id2 = 2;
+  }
+  one client_info = 1;
+  message two {
+    string token = 1;
+  }
+  two recovery = 104;
+}
